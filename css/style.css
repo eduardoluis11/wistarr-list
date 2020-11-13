@@ -1,0 +1,53 @@
+/* File: style.css */
+
+/* This is the styling of the container that contains the cookie consent banner. I will change the css of the cookie
+container and cookie button to ids to override Bootstrap and avoid any bugs or errors. This doesn't seem to be working.
+*/
+.cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2f3640;
+    color: white;
+    padding: 0 32px;
+    box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+
+    transition: 400ms;
+}
+
+/* This will make the cookie banner to appear by sliding upwards. */
+.cookie-container.active {
+    bottom: 0;
+}
+
+/* This is the stylesheet for the "<a>" tags within the cookie container. I don't
+ want them to look blue since they would be hard to read.*/
+.cookie-container a {
+    color: white;
+}
+
+/* This is the stylesheet of the cookie button. */
+.cookie-btn {
+    background: #e84118;
+    border: 0;
+    color: white;
+    padding: 12px 48px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* This adds padding between the body of index.php and the footer. I'll use IDs to override bootstrap's css. IT
+WORKS. I changed the code so that only the footer will have padding top with the rest of the webpages to keep
+ the design across all pages consistent. IT WORKS.*/
+#bodyFooter3 {
+    padding-top: 170px;
+}
+
+/* This adds spacing (padding) between the titles of each page (with h1 tags) and the body of their respective pages.
+IT WORKS (it has priority over Bootstrap). */
+h1 {
+    padding-bottom: 50px;
+}
